@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-09-05T05:26:13.980059+00:00",
+  "snapshot_status": "complete",
+  "global": {
+    "market_risk": {
+      "status": "ok",
+      "score_pct": 44.193297716118906,
+      "level": "MODERATE",
+      "data_coverage_pct": 100.0,
+      "data_confidence_level": "HIGH",
+      "reason_codes": [],
+      "explanations": [
+        "Composante macro non incluse (non encore calibrée)."
+      ],
+      "parameter_status": "UNCALIBRATED"
+    },
+    "sentiment": {
+      "status": "ok",
+      "value": 73,
+      "level": "greed",
+      "source_observation_date": "2026-09-05"
+    },
+    "macro": {
+      "status": "not_yet_calibrated"
+    }
+  },
+  "assets": {
+    "BTC-EUR": {
+      "symbol": "BTC-EUR",
+      "reference_price": {
+        "status": "ok",
+        "value": 68636.0,
+        "currency": "EUR",
+        "source": "kraken_daily_close",
+        "price_type": "daily_close",
+        "source_observation_date": "2026-09-04"
+      },
+      "technical": {
+        "status": "ok",
+        "primary_decision": "WAIT",
+        "confidence_pct": 69.14,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "source_observation_date": "2026-09-04",
+        "data_coherence_status": "not_applicable"
+      },
+      "market_context": {
+        "status": "ok",
+        "relationship": "NEUTRAL",
+        "relationship_strength": "NONE",
+        "context_adjusted_signal_quality_pct": 69.14,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00"
+      },
+      "asset_risk": {
+        "status": "ok",
+        "score_pct": 47.32798077352308,
+        "level": "MODERATE",
+        "data_coverage_pct": 100.0,
+        "data_confidence_level": "HIGH",
+        "reason_codes": [
+          "ASSET_RISK_TECHNICAL_EXTENSION_HIGH"
+        ],
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "parameter_status": "UNCALIBRATED"
+      },
+      "global_market_risk_ref": "global.market_risk",
+      "opportunity": {
+        "status": "not_implemented",
+        "score_pct": null,
+        "level": null,
+        "reason_codes": []
+      }
+    },
+    "ETH-EUR": {
+      "symbol": "ETH-EUR",
+      "reference_price": {
+        "status": "ok",
+        "value": 2115.88,
+        "currency": "EUR",
+        "source": "kraken_daily_close",
+        "price_type": "daily_close",
+        "source_observation_date": "2026-09-04"
+      },
+      "technical": {
+        "status": "ok",
+        "primary_decision": "WAIT",
+        "confidence_pct": 81.33,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "source_observation_date": "2026-09-04",
+        "data_coherence_status": "not_applicable"
+      },
+      "market_context": {
+        "status": "ok",
+        "relationship": "NEUTRAL",
+        "relationship_strength": "NONE",
+        "context_adjusted_signal_quality_pct": 81.33,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00"
+      },
+      "asset_risk": {
+        "status": "ok",
+        "score_pct": 67.63249529849367,
+        "level": "HIGH",
+        "data_coverage_pct": 100.0,
+        "data_confidence_level": "HIGH",
+        "reason_codes": [
+          "ASSET_RISK_VOLATILITY_ELEVATED",
+          "ASSET_RISK_TECHNICAL_EXTENSION_HIGH"
+        ],
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "parameter_status": "UNCALIBRATED"
+      },
+      "global_market_risk_ref": "global.market_risk",
+      "opportunity": {
+        "status": "not_implemented",
+        "score_pct": null,
+        "level": null,
+        "reason_codes": []
+      }
+    }
+  },
+  "system": {
+    "engines_used": [
+      "asset_risk_engine v0.1.0",
+      "global_market_risk_engine v0.1.0",
+      "kraken_daily_close",
+      "v2.2.0",
+      "v2.3.0",
+      "v2.4.0"
+    ],
+    "diagnostics": [
+      {
+        "domain": "sentiment",
+        "symbol": null,
+        "engine": "v2.3.0",
+        "source_observation_date": "2026-09-05",
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "global_market_risk",
+        "symbol": null,
+        "engine": "global_market_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "reference_price",
+        "symbol": "BTC-EUR",
+        "engine": "kraken_daily_close",
+        "source_observation_date": "2026-09-04",
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "technical",
+        "symbol": "BTC-EUR",
+        "engine": "v2.2.0",
+        "source_observation_date": "2026-09-04",
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "market_context",
+        "symbol": "BTC-EUR",
+        "engine": "v2.4.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "asset_risk",
+        "symbol": "BTC-EUR",
+        "engine": "asset_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "reference_price",
+        "symbol": "ETH-EUR",
+        "engine": "kraken_daily_close",
+        "source_observation_date": "2026-09-04",
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "technical",
+        "symbol": "ETH-EUR",
+        "engine": "v2.2.0",
+        "source_observation_date": "2026-09-04",
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "market_context",
+        "symbol": "ETH-EUR",
+        "engine": "v2.4.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "asset_risk",
+        "symbol": "ETH-EUR",
+        "engine": "asset_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-09-05T05:26:13.980059+00:00",
+        "status": "ok"
+      }
+    ]
+  }
+}
