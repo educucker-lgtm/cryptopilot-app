@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.2",
+  "generated_at_utc": "2026-10-10T11:12:32.275119+00:00",
+  "snapshot_status": "complete",
+  "global": {
+    "market_risk": {
+      "status": "ok",
+      "score_pct": 25.410392768868505,
+      "level": "MODERATE",
+      "data_coverage_pct": 100.0,
+      "data_confidence_level": "HIGH",
+      "reason_codes": [],
+      "explanations": [
+        "Composante macro non incluse (non encore calibrée)."
+      ],
+      "parameter_status": "UNCALIBRATED"
+    },
+    "sentiment": {
+      "status": "ok",
+      "value": 64,
+      "level": "greed",
+      "source_observation_date": "2026-10-10"
+    },
+    "macro": {
+      "status": "not_yet_calibrated"
+    }
+  },
+  "assets": {
+    "BTC-EUR": {
+      "symbol": "BTC-EUR",
+      "reference_price": {
+        "status": "ok",
+        "value": 73745.1,
+        "currency": "EUR",
+        "source": "kraken_daily_close",
+        "price_type": "daily_close",
+        "source_observation_date": "2026-10-09"
+      },
+      "technical": {
+        "status": "ok",
+        "primary_decision": "WAIT",
+        "confidence_pct": 65.0,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "source_observation_date": "2026-10-09",
+        "data_coherence_status": "not_applicable"
+      },
+      "market_context": {
+        "status": "ok",
+        "relationship": "NEUTRAL",
+        "relationship_strength": "NONE",
+        "context_adjusted_signal_quality_pct": 65.0,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00"
+      },
+      "asset_risk": {
+        "status": "ok",
+        "score_pct": 51.707973666246126,
+        "level": "HIGH",
+        "data_coverage_pct": 100.0,
+        "data_confidence_level": "HIGH",
+        "reason_codes": [
+          "ASSET_RISK_TECHNICAL_EXTENSION_HIGH"
+        ],
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "parameter_status": "UNCALIBRATED"
+      },
+      "global_market_risk_ref": "global.market_risk",
+      "opportunity": {
+        "status": "decided",
+        "score_pct": 65.0,
+        "band": "HIGH",
+        "action": "WAIT",
+        "confidence": "DEGRADED",
+        "reason_codes": [
+          "DECISION_ASSET_RISK_HIGH",
+          "DECISION_TECHNICAL_SOFT_GATE_ACTIVE",
+          "DECISION_TECHNICAL_WAIT"
+        ]
+      }
+    },
+    "ETH-EUR": {
+      "symbol": "ETH-EUR",
+      "reference_price": {
+        "status": "ok",
+        "value": 2220.09,
+        "currency": "EUR",
+        "source": "kraken_daily_close",
+        "price_type": "daily_close",
+        "source_observation_date": "2026-10-09"
+      },
+      "technical": {
+        "status": "ok",
+        "primary_decision": "WAIT",
+        "confidence_pct": 65.0,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "source_observation_date": "2026-10-09",
+        "data_coherence_status": "not_applicable"
+      },
+      "market_context": {
+        "status": "ok",
+        "relationship": "NEUTRAL",
+        "relationship_strength": "NONE",
+        "context_adjusted_signal_quality_pct": 65.0,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00"
+      },
+      "asset_risk": {
+        "status": "ok",
+        "score_pct": 47.28897749753225,
+        "level": "MODERATE",
+        "data_coverage_pct": 100.0,
+        "data_confidence_level": "HIGH",
+        "reason_codes": [
+          "ASSET_RISK_TECHNICAL_EXTENSION_HIGH"
+        ],
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "parameter_status": "UNCALIBRATED"
+      },
+      "global_market_risk_ref": "global.market_risk",
+      "opportunity": {
+        "status": "decided",
+        "score_pct": 65.0,
+        "band": "HIGH",
+        "action": "WAIT",
+        "confidence": "DEGRADED",
+        "reason_codes": [
+          "DECISION_TECHNICAL_SOFT_GATE_ACTIVE",
+          "DECISION_TECHNICAL_WAIT"
+        ]
+      }
+    }
+  },
+  "system": {
+    "engines_used": [
+      "asset_risk_engine v0.1.0",
+      "global_market_risk_engine v0.1.0",
+      "kraken_daily_close",
+      "v2.2.0",
+      "v2.3.0",
+      "v2.4.0"
+    ],
+    "diagnostics": [
+      {
+        "domain": "sentiment",
+        "symbol": null,
+        "engine": "v2.3.0",
+        "source_observation_date": "2026-10-10",
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "global_market_risk",
+        "symbol": null,
+        "engine": "global_market_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "reference_price",
+        "symbol": "BTC-EUR",
+        "engine": "kraken_daily_close",
+        "source_observation_date": "2026-10-09",
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "technical",
+        "symbol": "BTC-EUR",
+        "engine": "v2.2.0",
+        "source_observation_date": "2026-10-09",
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "market_context",
+        "symbol": "BTC-EUR",
+        "engine": "v2.4.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "asset_risk",
+        "symbol": "BTC-EUR",
+        "engine": "asset_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "reference_price",
+        "symbol": "ETH-EUR",
+        "engine": "kraken_daily_close",
+        "source_observation_date": "2026-10-09",
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "technical",
+        "symbol": "ETH-EUR",
+        "engine": "v2.2.0",
+        "source_observation_date": "2026-10-09",
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "market_context",
+        "symbol": "ETH-EUR",
+        "engine": "v2.4.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      },
+      {
+        "domain": "asset_risk",
+        "symbol": "ETH-EUR",
+        "engine": "asset_risk_engine v0.1.0",
+        "source_observation_date": null,
+        "evaluation_at_utc": "2026-10-10T11:12:32.275119+00:00",
+        "status": "ok"
+      }
+    ]
+  },
+  "continuity": {
+    "status": "available",
+    "current_generated_at_utc": "2026-10-10T11:12:32.275119+00:00",
+    "previous_generated_at_utc": "2026-10-09T11:55:38.272046+00:00",
+    "comparability": "full",
+    "unavailable_reason": null,
+    "changes": [
+      {
+        "category": "GLOBAL_RISK_LEVEL_CHANGED",
+        "symbol": null,
+        "from": "LOW",
+        "to": "MODERATE"
+      },
+      {
+        "category": "ASSET_RISK_LEVEL_CHANGED",
+        "symbol": "BTC-EUR",
+        "from": "MODERATE",
+        "to": "HIGH"
+      }
+    ]
+  }
+}
